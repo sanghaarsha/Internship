@@ -100,8 +100,8 @@
             enteredValue: "",
         };
     },
-    
     methods: {
+          // This here, is a method named 'addGoal'
           addGoal() {
               this.goals.push(this.enteredValue);
               this.enteredValue = "";
@@ -121,7 +121,8 @@
       v-model="enteredValue"
       @keyup.enter="addGoal"
       />
-
+      
+      <!-- We are using the method 'addGoal' here when the button is clicked-->
       <button id="add" v-on:click="addGoal">Add</button>
 
       <ul id="list">
