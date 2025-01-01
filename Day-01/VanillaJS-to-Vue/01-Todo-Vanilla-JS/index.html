@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Importing the main.js file -->
+        <!-- We are deferring it because: We want the script to be executed after the HTML content is loaded -->
+        <script src="./main.js" defer></script>
+
+        <!-- Importing the style.css file -->
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>ToDo App</title>
+    </head>
+
+    <body>
+        <div class="todo">
+            <div class="todo_input">
+                <h1>MY TODO</h1>
+                <input type="text" id="input" placeholder="Add a new task" />
+                <button id="add">Add</button>
+            </div>
+            <div class="todo_display">
+                <ul id="list">
+                    <!-- to do items placed here dynamically-->
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

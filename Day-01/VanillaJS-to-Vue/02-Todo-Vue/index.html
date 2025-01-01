@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Importing VueJS -->
+        <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+
+        <!-- Importing the main.js file -->
+        <script src="./main.js" defer></script>
+
+        <!-- Importing the style.css file -->
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>ToDo App</title>
+    </head>
+
+    <body>
+        <div class="todo">
+            <div class="todo_input">
+                <h1>MY TODO</h1>
+                <!-- Vue concepts Used-->
+                <!-- v-model : Two-way data binding between form input and app state -->
+                <!-- @keyup.enter : Event handler that triggers when Enter key is pressed -->
+                <!-- v-on:click : Event listener for click events (can also be written as @click) -->
+                <input
+                    type="text"
+                    id="input"
+                    placeholder="Add a new task"
+                    v-model="enteredValue"
+                    @keyup.enter="addGoal"
+                />
+                <!-- <button id="add" @click="addGoal">Add</button> -->
+                <button id="add" v-on:click="addGoal">Add</button>
+            </div>
+
+            <div class="todo_display">
+                <!-- Vue concepts used: -->
+                <!-- v-for : Loop through the goals array and display each item -->
+                <!-- {{}} : Template syntax for displaying dynamic data -->
+
+                <ul id="list">
+                    <!-- to do items placed here dynamically-->
+                    <li v-for="goal in goals">{{ goal }}</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

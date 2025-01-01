@@ -1,60 +1,144 @@
-## Progress Report
+# Daily Progress Report
 
-*Date: 2025/01/01*
+ _*Date: 2025/01/01*_
 
-#### Today's Focus
+## Today's Focus
 
-*Specify which technology I worked on today*
+- Introduction to Vue
 
-- ...
-- ... etc.
+## Learning Objectives
 
-#### Learning Objectives
+- Setup environment for Vue
+- Use Vue in a simple project
 
-*List of specific topics/concepts I aimed to learn today*
+## Tasks Completed
 
-- ...
-- ... etc.
+- Converted a simple To-do application from vanilla JS to VueJS
 
-#### Tasks Completed
+## Key Learnings
 
-*Detail of the specific tasks, tutorials, or exercises completed*
+- Vue Directives
 
-- ...
-- ... etc.
+  - They provide a way to reactively update the DOM based on changes in the data or state
+  - Starts with "v-"
+  - Few core vue directives:
+    <ul>
+      <li>v-bind : bind attribute to an expression</li>
 
-#### Code Examples
+    ```html
+    <img v-bind:src="image_url">
+    <a v-bind:href="link_url">Click me</a>
+    <!-- shorthand -->
+    <a :href="link_url">Click me</a>
+    ```
 
-*code snippets*
+    <li>v-model : create a two way data binding between form input and application state</li>
 
-```javascript
-  console.log("Hello!!")
-```
+    ```html
+    <img v-bind:src="image_url">
+    
+    <a v-bind:href="link_url">Click me</a>
+    <!-- shorthand -->
+    <a :href="link_url">Click me</a>
+    ```
 
-#### Key Learnings
+    <li>v-for : render list of items by iterating over an array</li>
 
-*Important concepts, insights, or techniques learned*
+    ```html
+    <ul>
+      <li v-for:"item in items">{{item}}</li>
+    </ul>
+    ```
 
-- ...
-- ... etc.
+    <li>v-if, v-else-if and v-else : conditional rendering</li>
 
-#### Challenges Faced
+    ```html
+    <div>
+      <h2>Even or Odd</h2>
+      <p v-if="num % 2 == 0">
+        Even
+      </p>
+      <p v-else-if="num % 2 == 1">
+        Odd
+      </p>
+      <p v-else>
+        Invalid
+      </p>
+    </div>
+    ```
 
-*Difficulties encountered, and how it was tackled*
+    <li>v-on : attach event listener to elements</li>
 
-- ...
-- ... etc.
+    ```html
+    <button v-on:click="clickHandler">Click me!</button>
+    ```
 
-#### Resources Used
+    <br>
 
-*List tutorials, documentation, or other learning materials*
+    _Vue also allows us to create custom directives_
 
-- ...
-- ... etc.
+    </ul>
 
-#### Tomorrow's Plan
+- Vue Methods
+  <ul>
+    <li>Methods are functions that are used in Vue instances</li>
+    <li>They are defined inside the `methods` object in Vue component options</li>
+    <li>Methods can be called from:
+    <ul>
+      <li>Template expressions</li>
+      <li>Event listeners</li>
+      <li>Other component logic</li>
+    </ul>
+    </li>
+    <li>Vue method:</li>
 
-*Outline for what to work on next*
+  ```js
+  Vue.createApp({
+    data: function () {
+        return {
+            goals: [],
+            enteredValue: "",
+        };
+    },
+    
+    methods: {
+          addGoal() {
+              this.goals.push(this.enteredValue);
+              this.enteredValue = "";
+          },
+      },
+  }).mount(".todo");
+  ```
 
-- ...
-- ... etc.
+  <li>Methods can be used in templates like this:</li>
+
+  ```html
+  <div class="todo">
+      <input
+      type="text"
+      id="input" 
+      placeholder="Add a new task"
+      v-model="enteredValue"
+      @keyup.enter="addGoal"
+      />
+
+      <button id="add" v-on:click="addGoal">Add</button>
+
+      <ul id="list">
+        <li v-for="goal in goals">{{ goal }}</li>
+      </ul>
+  </div>
+  ```
+
+  </ul>
+
+## Resources Used
+
+- [Google Search](https://google.com)
+- [Youtube](https://youtube.com)
+- [Devdocs](https://devdocs.io)
+- Online courses
+
+## Tomorrow's Plan
+
+- Learning more core concepts of vue

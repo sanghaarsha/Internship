@@ -1,4 +1,4 @@
-# Overview
+# Progress Overview
 
 ### Personal Information
 
@@ -11,7 +11,7 @@
 
 **Vue.js**
 
-- [ ] Basic Setup and Configuration
+- [x] Basic Setup and Configuration
 - [ ] Component Basics
 - [ ] Vue Router
 - [ ] State Management (Vuex)
