@@ -20,6 +20,11 @@
                 <!-- Dynamically generate using Vue -->
                 {{learningGoals}}
             </p>
+            <p>
+                <!-- Interpolation does not work for attributes -->
+                <!-- We need to bind the value of attribute using a vue directive called: v-bind -->
+                Learn more about <a v-bind:href="vueLink">Vue</a>
+            </p>
         </section>
     </body>
 </html>

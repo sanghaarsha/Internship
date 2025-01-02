@@ -5,6 +5,7 @@ const app = Vue.createApp({
     data: function () {
         return {
             learningGoals: "Learn Vue.js from scratch and master it!",
+            vueLink: "https://vuejs.org/",
         };
     },
     // 2. methods: this is where we define the methods that we want to use in our app
