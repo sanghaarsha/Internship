@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- scripts -->
+        <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+        <script src="./app.js" defer></script>
+        <title>Vue App</title>
+    </head>
+    <body>
+        <header>
+            <h1>Learning Vue</h1>
+        </header>
+        <section id="my_goals">
+            <h2>My Learning Goals</h2>
+            <p>
+                <!-- Randomly generate using a user defined vue method: "randomizeLearningGoals" in our case -->
+                {{randomizeLearningGoals()}}
+            </p>
+
+            <p>Learn more about <a v-bind:href="vueLink">Vue</a></p>
+        </section>
+    </body>
+</html>
