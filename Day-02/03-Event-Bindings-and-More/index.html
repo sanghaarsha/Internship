@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue App</title>
+        <!-- favicon -->
+        <link rel="icon" href="favicon.png" type="image/x-icon" />
+        <!-- scripts -->
+        <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+        <script src="app.js" defer></script>
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="counter">
+                <h1>Counter</h1>
+                <div class="count">{{currentCount}}</div>
+
+                <!-- reacting to a event -->
+                <button class="inc" v-on:click="increaseCount()">+</button>
+                <button class="dec" @click="decreaseCount()">-</button>
+
+                <!-- events arguments -->
+                <span class="more_btns">
+                    <button class="inc" v-on:click="increaseCount(10)">
+                        +10
+                    </button>
+                    <button class="dec" @click="decreaseCount(5)">-5</button>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
