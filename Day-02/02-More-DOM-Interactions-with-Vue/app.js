@@ -1,21 +1,24 @@
 const app = Vue.createApp({
-    data: function () {
+    data() {
         return {
-            learningGoals: "",
+            learningGoalsA:
+                "Master Vue.js and create beautiful front-end applications",
+            learningGoalsB:
+                "Learn PHP and Laravel and create amazing APIs and back-end applications",
             vueLink: "https://vuejs.org/",
         };
     },
 
     // methods: this is where we define the methods that we want to use in our app
     methods: {
-        randomizeLearningGoals: function () {
+        randomizeLearningGoals() {
             const rand = Math.random();
 
             // return a random learning goal
             if (rand < 0.5) {
-                return "Learn Vue.js from scratch and master it!";
+                return this.learningGoalsA;
             } else {
-                return "Learn PHP and Laravel";
+                return this.learningGoalsB;
             }
         },
     },
