@@ -35,11 +35,8 @@
     <li>v-model : create a two way data binding between form input and application state</li>
 
     ```html
-    <img v-bind:src="image_url">
-    
-    <a v-bind:href="link_url">Click me</a>
-    <!-- shorthand -->
-    <a :href="link_url">Click me</a>
+    <input v-model:"username" type="text">
+    <p>Hello, {{username}}!</p>
     ```
 
     <li>v-for : render list of items by iterating over an array</li>
