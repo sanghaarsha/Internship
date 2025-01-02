@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --sage: #88ab75;
+    --ocean: #2d93ad;
+    --navy: #080357;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: var(--navy);
+    background: #f8f8f8;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, var(--sage) 0%, var(--ocean) 100%);
+    padding: 3.5rem 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.1) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(8, 3, 87, 0.2);
+    animation: slideIn 0.5s ease-out;
+    letter-spacing: 1px;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#my_goals {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20px);
+    margin: 0 1rem;
+    text-align: center;
+    border: 1px solid rgba(45, 147, 173, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#my_goals:hover {
+    transform: translateY(-22px);
+    box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: var(--ocean);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--sage), var(--ocean));
+    border-radius: 2px;
+}
+
+p {
+    color: var(--navy);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 1rem 2rem;
+    background-color: rgba(136, 171, 117, 0.1);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #my_goals {
+        margin: 0 0.5rem;
+        transform: translateY(-10px);
+    }
+
+    #my_goals:hover {
+        transform: translateY(-12px);
+    }
+}
