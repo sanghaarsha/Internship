@@ -22,9 +22,6 @@ const app = Vue.createApp({
         confirmName() {
             this.confirmedName = this.username;
         },
-        handleSubmit(e) {
-            console.log(e);
-        },
     },
 });
 

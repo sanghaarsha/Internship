@@ -18,6 +18,11 @@
                 <h1>Counter</h1>
                 <div class="count">{{currentCount}}</div>
 
+                <!-- Locking content using v-once -->
+                <div class="count start_value" v-once>
+                    Start Value: {{currentCount}}
+                </div>
+
                 <!-- reacting to a event -->
                 <button class="inc" v-on:click="increaseCount()">+</button>
                 <button class="dec" @click="decreaseCount()">-</button>
@@ -42,8 +47,8 @@
                 <p>Your name: {{confirmedName}}</p>
             </div>
 
-            <!-- Event modifiers -->
-            <form class="signup_form" v-on:submit.prevent="handleSubmit">
+            <!-- Event modifiers '.prevent' prevents default behavior  -->
+            <form class="signup_form" v-on:submit.prevent>
                 <input type="text" class="form_text" />
                 <button class="signup_btn">Signup</button>
             </form>
