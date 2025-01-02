@@ -112,7 +112,7 @@
 
     - .once : event triggers only once
     - .self : only trigger if event target is element itself
-<br>
+
     - Key Modifiers:
       - keyup : triggered when a keyboard key is released
 
@@ -122,7 +122,6 @@
         ```
 
       - keydown : triggered when a keyboard key is pressed
-   <br>
 
     - modifiers can be chained
 
