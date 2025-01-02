@@ -30,6 +30,13 @@
                     <button class="dec" @click="decreaseCount(5)">-5</button>
                 </span>
             </div>
+
+            <!-- Using native event object -->
+            <div class="input_events">
+                <h1>Enter your name:</h1>
+                <input type="text" v-on:input="setName" />
+                <p>Your name: {{username}}</p>
+            </div>
         </div>
     </body>
 </html>

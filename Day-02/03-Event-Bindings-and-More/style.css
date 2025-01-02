@@ -15,6 +15,14 @@ body {
     font-family: system-ui, sans-serif;
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
 .counter {
     background: #242438;
     padding: 2rem;
@@ -73,4 +81,37 @@ button:active {
 
 .more_btns button {
     font-size: 0.9rem; /* slightly smaller font */
+}
+
+.input_events {
+    background: #242438;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input_events input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.input_events input:focus {
+    border-color: var(--ocean);
+}
+
+.input_events p {
+    color: white;
+    margin: 1rem 0 0 0;
+    font-size: 1.1rem;
 }
