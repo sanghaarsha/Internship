@@ -34,9 +34,19 @@
             <!-- Using native event object -->
             <div class="input_events">
                 <h1>Enter your name:</h1>
-                <input type="text" v-on:input="setName" />
-                <p>Your name: {{username}}</p>
+                <input
+                    type="text"
+                    v-on:input="setName($event, 'Dahal')"
+                    v-on:keyup.enter="confirmName"
+                />
+                <p>Your name: {{confirmedName}}</p>
             </div>
+
+            <!-- Event modifiers -->
+            <form class="signup_form" v-on:submit.prevent="handleSubmit">
+                <input type="text" class="form_text" />
+                <button class="signup_btn">Signup</button>
+            </form>
         </div>
     </body>
 </html>

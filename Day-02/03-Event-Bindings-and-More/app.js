@@ -3,6 +3,7 @@ const app = Vue.createApp({
         return {
             currentCount: 0,
             username: "",
+            confirmedName: "",
         };
     },
 
@@ -15,8 +16,14 @@ const app = Vue.createApp({
                 this.currentCount = this.currentCount - num;
             }
         },
-        setName(e) {
-            this.username = e.target.value;
+        setName(e, lastName) {
+            this.username = e.target.value + " " + lastName;
+        },
+        confirmName() {
+            this.confirmedName = this.username;
+        },
+        handleSubmit(e) {
+            console.log(e);
         },
     },
 });
