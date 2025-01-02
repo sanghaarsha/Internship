@@ -2,9 +2,9 @@ const app = Vue.createApp({
     data() {
         return {
             learningGoalsA:
-                "Master Vue.js and create beautiful front-end applications",
+                "<h3>Master Vue.js and create beautiful front-end applications</h3>",
             learningGoalsB:
-                "Learn PHP and Laravel and create amazing APIs and back-end applications",
+                "<h3>Learn PHP and Laravel and create amazing APIs and back-end applications</h3>",
             vueLink: "https://vuejs.org/",
         };
     },

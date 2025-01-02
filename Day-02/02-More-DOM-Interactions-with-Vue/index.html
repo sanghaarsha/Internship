@@ -18,11 +18,9 @@
         </header>
         <section id="my_goals">
             <h2>My Learning Goals</h2>
-            <p>
-                <!-- Randomly generate using a user defined vue method: "randomizeLearningGoals" in our case -->
-                {{randomizeLearningGoals()}}
-            </p>
-
+            <!-- Even if the result of interpolation contains HTML elements, Vue will render it as plain text by default, to prevent XSS attacks and Improve performance-->
+            <!-- The v-html directive is used to output raw HTML. For example: -->
+            <p v-html="randomizeLearningGoals()"></p>
             <p>Learn more about <a v-bind:href="vueLink">Vue</a></p>
         </section>
     </body>
