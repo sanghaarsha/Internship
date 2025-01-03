@@ -1,0 +1,134 @@
+:root {
+    --sage: #88ab75;
+    --ocean: #2d93ad;
+    --navy: #080357;
+    --red: #c91010;
+    --white: #f4f4f4;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #1c2841 100%);
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.counter {
+    background: #242438;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--white);
+    margin-top: 0;
+}
+
+.count {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--ocean);
+    margin: 1rem 0;
+}
+
+button {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.inc {
+    background-color: var(--sage);
+    color: var(--white);
+}
+
+.dec {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.input_events {
+    background: #242438;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input_events input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.input_events input:focus {
+    border-color: var(--ocean);
+}
+
+.input_events p {
+    color: var(--white);
+    margin: 1rem 0 0 0;
+    font-size: 1.1rem;
+}
+
+.reset_btn {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.reset_btn:hover {
+    background-color: #e51212;
+    transform: translateY(-2px);
+}
+
+.reset_btn:active {
+    transform: translateY(1px);
+}

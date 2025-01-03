@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue App</title>
+        <!-- favicon -->
+        <link rel="icon" href="favicon.png" type="image/x-icon" />
+        <!-- scripts -->
+        <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
+        <script src="app.js" defer></script>
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="counter">
+                <h1>Counter</h1>
+                <div class="count">{{currentCount}}</div>
+
+                <button class="inc" v-on:click="increaseCount(10)">+10</button>
+                <button class="dec" v-on:click="decreaseCount(5)">-5</button>
+            </div>
+            <div class="input_events">
+                <h1>Enter your name:</h1>
+                <!-- Manually binding value and adding event listeners -->
+                <!-- <input
+                    type="text"
+                    v-bind:value="username"
+                    v-on:input="setName"
+                /> -->
+
+                <!-- using only the v-model-->
+                <input type="text" v-model="username" />
+
+                <button v-on:click="resetInput" class="reset_btn">Reset</button>
+                <p>Your name: {{username}}</p>
+            </div>
+        </div>
+    </body>
+</html>
